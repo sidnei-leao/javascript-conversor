@@ -17,7 +17,8 @@ body {
 }
 
 main {
-    width: 375px;
+     width: 100%;
+    max-width: 375px;
     background: #F4F4F4;
     border-radius: 20px;
     margin: 0 auto;
@@ -30,7 +31,8 @@ label {
     font-size: 14px;
 }
 
-select, input {
+select,
+input {
     border-radius: 4px;
     border: 1px solid #BBB;
     background: #FFF;
@@ -87,14 +89,29 @@ section {
 }
 
 .currency {
-color: #777777;
-font-weight: 400;
-font-size: 14px;
+    color: #777777;
+    font-weight: 400;
+    font-size: 14px;
 }
 
-.currency-value, .currency-value-to-convert {
+.currency-value,
+.currency-value-to-convert {
     color: #555555;
     font-weight: 700;
     font-size: 20px;
+}
 
+/* Responsividade para iPhone XR e telas menores */
+@media (max-width: 414px) {
+    .logo {
+        width: 250px; /* diminui para caber melhor */
+    }
+
+    main {
+        padding: 32px 16px 20px; /* reduz margens internas */
+    }
+
+    button {
+        font-size: 16px;
+    }
 }
